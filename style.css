@@ -1,0 +1,37 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #AD48FF;
+}
+.box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box span{
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 6px;
+    background: #FF905B;
+    border-radius: 8px;
+    transform-origin: 128px;
+    transform: scale(2.2)rotate(calc(var(--i) * (360deg / 50)));
+    animation: animeChargement 3s linear infinite;
+    animation-delay: calc(var(--i) * (3s / 50));
+}
+
+@keyframes animeChargement {
+    0%{
+        background:#FF1EC4 ;
+    }
+    25%{
+        background:#FF905B ;
+    }
+}
